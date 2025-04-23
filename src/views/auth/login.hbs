@@ -1,0 +1,14 @@
+<h2>Iniciar sesión</h2>
+
+{{#if message}}
+  <div class="alert alert-danger">{{message}}</div>
+{{/if}}
+
+<form action="/login" method="POST">
+  <input name="username" class="form-control my-2" placeholder="Usuario o correo" required>
+  <input type="password" name="password" class="form-control my-2" placeholder="Contraseña" required>
+  <button class="btn btn-primary">Entrar</button>
+</form>
+
+<hr>
+<a href="/register">Registrarse</a>

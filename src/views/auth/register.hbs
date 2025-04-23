@@ -1,0 +1,15 @@
+<h2>Registro de usuario</h2>
+
+{{#if message}}
+  <div class="alert alert-danger">{{message}}</div>
+{{/if}}
+
+<form action="/register" method="POST">
+  <input name="username" class="form-control my-2" placeholder="Nombre de usuario" required>
+  <input type="password" name="password" class="form-control my-2" placeholder="Contraseña" required>
+  <input type="password" name="confirmPassword" class="form-control my-2" placeholder="Confirmar contraseña" required>
+  <button class="btn btn-success">Registrarse</button>
+</form>
+
+<hr>
+<a href="/login">Ya tengo cuenta</a>
