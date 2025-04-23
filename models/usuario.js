@@ -21,7 +21,15 @@ module.exports = (sequelize, DataTypes) => {
     correo: DataTypes.STRING,
     contrasena: DataTypes.STRING,
     rol: DataTypes.STRING,
-    estado: DataTypes.BOOLEAN
+    estado: DataTypes.BOOLEAN,
+    token_activacion: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    token_reset: {
+      type: DataTypes.STRING,
+      allowNull: true
+    }
   }, {
     sequelize,
     modelName: 'Usuario',

@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(session({
   secret: 'appcenar_secret',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true
 }));
 app.use(flash());
 

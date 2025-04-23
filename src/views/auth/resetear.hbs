@@ -1,0 +1,14 @@
+<h2>Restablecer contraseña</h2>
+
+{{#if message}}
+  <div class="alert alert-danger">{{message}}</div>
+{{/if}}
+
+<form action="/resetear-contrasena" method="POST">
+  <input type="hidden" name="token" value="{{token}}">
+  <input type="password" name="password" class="form-control my-2" placeholder="Nueva contraseña" required>
+  <input type="password" name="confirmPassword" class="form-control my-2" placeholder="Confirmar contraseña" required>
+  <button class="btn btn-success">Guardar nueva contraseña</button>
+</form>
+
+<a href="/login">Volver al login</a>

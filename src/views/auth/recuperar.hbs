@@ -1,0 +1,12 @@
+<h2>Recuperar contraseña</h2>
+
+{{#if message}}
+  <div class="alert alert-danger">{{message}}</div>
+{{/if}}
+
+<form action="/recuperar" method="POST">
+  <input name="identificador" class="form-control my-2" placeholder="Correo o nombre de usuario" required>
+  <button class="btn btn-warning">Enviar enlace de recuperación</button>
+</form>
+
+<a href="/login">Volver al login</a>
